@@ -32,4 +32,10 @@ export default class ConnectionDecorator {
     const result = res[0] as ResultSetHeader;
     return result.insertId;
   }
+
+  public async delete(table: string, where: string, values: any[]): Promise<boolean> {
+    const res = await this.connection.query(`DELETE FROM ${table} ${where}`, values);
+    const result = res[0] as ResultSetHeader;
+    return !!result.affectedRows;
+  }
 }

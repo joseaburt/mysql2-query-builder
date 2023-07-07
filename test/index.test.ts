@@ -57,4 +57,15 @@ describe('Select Query Builder', () => {
     const result = await connection.select('*').from('musics').where('title = ?').execute(['Nonexistent']);
     expect(result.length).toBe(0);
   });
+
+  it('should delete given row', async () => {
+    let rows = await connection.select('*').from('musics').where('title = ?').execute(['Home']);
+    expect(rows.length).toBe(1);
+
+    const deleteResult = await connection.delete('musics', 'WHERE title = ?', ['Home']);
+    expect(deleteResult).toBeTruthy();
+
+    rows = await connection.select('*').from('musics').where('title = ?').execute(['Home']);
+    expect(rows.length).toBe(0);
+  });
 });
