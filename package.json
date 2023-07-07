@@ -1,6 +1,6 @@
 {
   "name": "@joseaburt/mysql2-query-builder",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/mysql2-query-builder.esm.js",
