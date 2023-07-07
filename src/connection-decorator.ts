@@ -8,8 +8,8 @@ export default class ConnectionDecorator {
     return this.connection;
   }
 
-  public closeConnection(): void {
-    this.connection.destroy();
+  public async closeConnection(): Promise<void> {
+    return await this.connection.end();
   }
 
   public select(...columns: string[]): Pick<SelectQueryBuilder, 'from'> {

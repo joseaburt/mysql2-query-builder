@@ -44,7 +44,7 @@ describe('Select Query Builder', () => {
 
   afterAll(async () => {
     await connection.execute('TRUNCATE TABLE musics');
-    connection.closeConnection();
+    await connection.closeConnection();
   });
 
   it('should select the correct row based on a WHERE condition', async () => {
