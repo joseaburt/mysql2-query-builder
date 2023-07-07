@@ -32,7 +32,7 @@ export default class SelectQueryBuilder {
     return this;
   }
 
-  public on(condition: string): Pick<SelectQueryBuilder, 'where' | 'get' | 'execute'> {
+  public on(condition: string): Pick<SelectQueryBuilder, 'join' | 'where' | 'get' | 'execute'> {
     this.sql += 'ON ' + condition + ' ';
     return this;
   }
