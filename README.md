@@ -59,16 +59,30 @@ const trackId = 7;
 const connection = await datasource.getConnection();
 
 // SELECT * FROM tracks WHERE id = 7;
-const tracks = await connection.select('*').from('tracks').where('id = ?').execute([trackId]);
+const tracks = await connection
+  .select('*')
+  .from('tracks')
+  .where('id = ?')
+  .execute([trackId]);
 
 // SELECT title as trackTitle, album_id as albumId FROM tracks WHERE id = 7;
-const tracks = await connection.select('title as trackTitle', 'album_id as albumId').from('tracks').where('id = ?').execute([trackId]);
+const tracks = await connection
+  .select('title as trackTitle', 'album_id as albumId')
+  .from('tracks').where('id = ?')
+  .execute([trackId]);
 
 // SELECT t.title as trackTitle, t.album_id as albumId FROM t WHERE id = 7;
-const tracks = await connection.select('t.title as trackTitle', 't.album_id as albumId').from('tracks as t').where('id = ?').execute([trackId]);
+const tracks = await connection
+  .select('t.title as trackTitle', 't.album_id as albumId')
+  .from('tracks as t').where('id = ?')
+  .execute([trackId]);
 
 // SELECT * FROM tracks WHERE id = 7 AND deleted_at IS NULL;
-const tracks = await connection.select('*').from('tracks').where('id = ?', 'deleted_at IS NULL').execute([trackId]);
+const tracks = await connection
+  .select('*')
+  .from('tracks')
+  .where('id = ?', 'deleted_at IS NULL')
+  .execute([trackId]);
 ```
 
 ### Join
