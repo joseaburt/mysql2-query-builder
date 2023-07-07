@@ -1,6 +1,5 @@
-export const sum = (a: number, b: number) => {
-  if ('development' === process.env.NODE_ENV) {
-    console.log('dev only output');
-  }
-  return a + b;
-};
+import DataSource from './datasource';
+
+export { DataSource };
+export default DataSource;
+export { default as ConnectionDecorator } from './connection-decorator';
