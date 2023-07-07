@@ -2,7 +2,7 @@
 
 Simple abstraction for create composable sql queries base on `mysql2` repository.
 
-⚠️ This repo is part of a course that is in progress and maybe you can see that there is just a couple features at the moment, that is why while the course advance more features will be added. Check current one. Remember all extra queries born from a base function provided by `mysql2` and I refer to `#query` function, from this we extends and get all those custom stuffs. 😉
+⚠️ This repo is part of a course that is in progress and maybe you can see that there is just a couple features at the moment, that is because while the course advance more features will be added. Check current one. Remember all extra queries born from a base function provided by `mysql2` and I refer to `#query` function, from this we extends and get all those custom stuffs. 😉
 
 ⚠️ This is a repo for teaching my junior students and I recommend to use more powerful solution like a ORM. However you can use this that is ready for production, more for those legacy projects that use direct string sql commands in the persistance layer.
 
