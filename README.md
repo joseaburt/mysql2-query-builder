@@ -6,6 +6,13 @@ Simple abstraction for create composable sql queries base on `mysql2` repository
 
 ⚠️ This is a repo for teaching my junior students and I recommend to use more powerful solution like a ORM. However you can use this that is ready for production, more for those legacy projects that use direct string sql commands in the persistance layer.
 
+**Recomended repositories for this porpuse**
+- [Knex](https://github.com/knex/documentation)
+- [sequelize](https://github.com/sequelize/sequelize)
+- [typeorm](https://github.com/typeorm/typeorm)
+
+--- 
+
 ## Connection Configuration
 
 ```ts
